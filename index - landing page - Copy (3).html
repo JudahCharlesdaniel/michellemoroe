@@ -1,0 +1,150 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8"></meta>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"></meta>
+    <title>Welcome Screen</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            min-height: 100vh;
+            background: linear-gradient(to bottom, black, black);
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            padding: 2rem 1rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 400px;
+        }
+
+        .image-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 0.5rem;
+            margin-bottom: 3rem;
+        }
+
+        .image-wrapper {
+            position: relative;
+            aspect-ratio: 1/1;
+            border-radius: 0.5rem;
+            overflow: hidden;
+        }
+
+        .image-wrapper.wide {
+            grid-column: span 2;
+            aspect-ratio: 2/1;
+        }
+
+        .image-wrapper img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .welcome-text {
+            text-align: center;
+            margin-bottom: 3rem;
+            color: white;
+        }
+
+        .welcome-text h1 {
+            font-size: 1.875rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+
+        .welcome-text p {
+            color: #d1d5db;
+        }
+
+        .button-container {
+            display: flex;
+            gap: 0.5rem;
+        }
+
+        .btn {
+            flex: 1;
+            padding: 0.75rem;
+            border: none;
+            border-radius: 0.375rem;
+            cursor: pointer;
+            font-size: 1.25rem;
+            transition: background-color 0.2s;
+        }
+
+        .btn.primary {
+            background-color: #facc15;
+            color: black;
+        }
+
+        .btn.primary:hover {
+            background-color: #eab308;
+        }
+
+        .btn.secondary {
+            background-color: transparent;
+            color: white;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .btn.secondary:hover {
+            background-color: rgba(255, 255, 255, 0.1);
+        }
+
+        @media (max-width: 400px) {
+            .container {
+                width: 100%;
+            }
+            
+            .welcome-text h1 {
+                font-size: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="image-grid">
+            <div class="image-wrapper">
+                <img alt="Creative photo 1" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhCksQOePGy_p66hizsKlf1-PyqrbwZYlcUjYIm-RvC5GKVkJPX6QqR4U8XHHkfPpUZSuAOlgcJWxqpkP7D2h84aOmaseYv8lDF5LVMp5LhPYcUbcRpcgf6HW8DW-NXO1Zv0JpvTNkS4_VMFP_qiTF-flFyv95atbScnti5WW0ATkvVx6gqL5n5-mARkfk/s877/WhatsApp%20Image%202025-01-20%20at%2015.57.10_2962685d.jpg" />
+            </div>
+            <div class="image-wrapper">
+                <img alt="Creative photo 2" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiyHLD0XrMBafF8xp_Q9_sRFhYfuoUMBdY7jawwahyphenhyphentbQgcdOcTsiNgM47EULP_dVkY9FvDwxj-N8_jl4awfr-Z7qEbrpsLQ7ach9iAqgolcFkWI7KUBT7HV1nOXnvru6w4nzwpAQq2HBE268o2pI7hcmcSPWYhQ0rrawgA_bjALR5SgsYEw9Dul_Zcatg/s884/WhatsApp%20Image%202025-01-20%20at%2015.57.09_60fb168a.jpg" />
+            </div>
+            <div class="image-wrapper wide">
+                <img alt="Creative photo 3" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjrJr9rjauhEifND4BS0ZKyqkJr4ehcNR9zK83AKlTBAWKvHhBMm3H2vSKmCi9lAnmrGOnYJyZORcVqMEapLoyJpBWT3rNeqR6z-_mCl_MypZ6l7m3_vSoFy8uS6pmMGHnFotgkljpcUapVo8ujGx_sa9TFdetANc3lmT-9u7mDCrVH1r-HUeYORTp2hcs/s320/WhatsApp%20Image%202025-01-20%20at%2015.57.07_d9a9ded9.jpg"  />
+            </div>
+            <div class="image-wrapper">
+                <img alt="Creative photo 4" src= "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhg7ZIM4j0In25LiieEAJxgCe7GJX4zb8_jKl_PI6mCr3_zR8lgrxvNoi1hXMx6gwGi6777RKeclRvLbyhyphenhyphensv2yiSXHjWFP2x_C-7aO3W8uILfciS_FZCgaZc5KlgDuLL01PPdbjI2mgvSW6BjixuxMHFgxG31-J8ExtNZYGoXWvDewG9Ruecyz1FM4So4/s887/WhatsApp%20Image%202025-01-20%20at%2015.57.07_1e08ddb3.jpg"/>
+            </div>
+            <div class="image-wrapper">
+                <img alt="Creative photo 5" src= "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiPcxsOOohW2DNOWI5UpFRQCTN96-kcgB5F1tOxJPo6h25GjR8hoyA_Q_Bai_VUj0JX6OXyGoST-S34qPFnL-Vw578SrNoyeDdBJBrjBMpIKLvWRGwJG4yDyMl6yJR1d-syCf5u1fWDFgHAof9bS5dBasng6iV9hvlnpejHtaL5GVKjBt6HIXYGIlV4OQ4/s320/WhatsApp%20Image%202025-01-20%20at%2015.57.06_6676bab5.jpg" />
+            </div>
+        </div>
+
+        <div class="welcome-text">
+            <h1>Welcome to Micheal Morron' Official Fan Club!.
+              
+</h1>
+            <p>Celebrating the incredible talent of Michele Morrone—actor, singer, and model! From his captivating role in 365 Days to his soulful music, Michele continues to inspire and mesmerize fans worldwide. Follow for updates, exclusive content, and a community that appreciates his artistry. 💫</p>
+        </div>
+
+        <div class="button-container">
+          <a href="https://officialshannonrwatts.blogspot.com/p/membership-cards.html">
+            <button class="btn primary">Apply for membership fan card</button></a>
+          <a href="https://officialshannonrwatts.blogspot.com/p/registration-form-margin-0-padding-0.html">
+            <button class="btn secondary">Join the fan club community
+              </button></a>
+        </div>
+    </div>
+</body>
+</html>
